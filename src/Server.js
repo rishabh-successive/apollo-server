@@ -15,7 +15,7 @@ class Server {
   setupRoutes() {
     const { app } = this;
     app.get('/', (req, res) => {
-      res.send('Route is running');
+      res.send('Route is running , Add "/graphql" to url to redirect to PLAYGROUND');
     });
   }
 

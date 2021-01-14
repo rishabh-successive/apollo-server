@@ -1,7 +1,5 @@
+import user from '../../service/user';
+
 export default {
-    getMyProfile: () => ({
-      id: 1,
-      name: 'rishabh',
-      email: 'rishi@successive.tech',
-    }),
+    getProfile: () => user.getAll(),
   };
