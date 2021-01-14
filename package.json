@@ -6,6 +6,8 @@
   "dependencies": {
     "apollo-server-express": "^2.19.1",
     "dotenv": "^8.2.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
     "esm": "^3.2.25",
     "express": "^4.17.1",
     "graphql": "^15.4.0",
@@ -17,6 +19,7 @@
     "@babel/node": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "babel-eslint": "^10.1.0",
+    "eslint": "^7.17.0",
     "eslint-config-airbnb": "^18.2.1",
     "nodemon": "^2.0.7"
   },
