@@ -1,7 +1,14 @@
-import * as dotenv from 'dotenv';
 
-const envVar = dotenv.config().parsed;
+import * as dotenv from 'dotenv';
+const envVars = dotenv.config();
+
 const config = {
-  PORT: envVar.PORT,
+    port: envVars.parsed.PORT,
+    nodeEnv: envVars.parsed.NODE_ENV
 };
+
+Object.freeze(
+    config
+);
+
 export default config;
