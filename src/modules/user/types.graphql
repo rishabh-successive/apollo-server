@@ -3,15 +3,11 @@ type User {
     name: String!
     email: String!
     role: String!
+    password: String!
+    createdBy: String!
 }
 
-input loginData {
-  email: String!
-  password: String!
-}
-
-type onLogin {
-  status: String!
-  Message: String!
-  Data: String!
+input loginDataInput {
+    email: String!
+    password: String!
 }
