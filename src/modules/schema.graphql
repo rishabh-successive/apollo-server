@@ -1,0 +1,18 @@
+type Query {
+     getMe: User!
+     getAll: [getAllType]!
+}
+
+type Mutation {
+    createTrainee(user: CreateUserInput): User!
+    # updateTrainee(id: ID!, role: String): User!
+    updateTrainee(user: UpdateUserInput): UpdatedUser!
+    deleteTrainee(id: ID!): ID!
+    loginUser(payload: loginDataInput): String!
+}
+
+type Subscription {
+    traineeAdded: User!
+    traineeUpdated: UpdatedUser!
+    traineeDeleted: ID!
+}
