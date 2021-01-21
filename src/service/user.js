@@ -10,15 +10,22 @@ class User {
 
     }
     
-    createUser(user){
+    createUser(users){
         this.id += 1;
-        this.users.set(this.id,{ ...user , id : this.id });
+        this.users.set(this.id,{ ...users , id : this.id });
         return this.users.get(this.id);
     }
 
-    updateUser(id,email){
-        const user = this.user.get(Number(id));
-        this.users.set(Number(id),{...user,email });
+    // updateUser(id,email){
+    //     const user = this.user.get(Number(id));
+    //     this.users.set(Number(id),{...user,email });
+    //     return this.users.get(Number(id));
+    // }
+
+    updateUser(users,id) {
+        console.log('Inside update method USer');
+        const traineeId = this.users.get(Number(id));
+        this.users.set(Number(id), {...traineeId, ...users});
         return this.users.get(Number(id));
     }
 

@@ -1,12 +1,12 @@
-
 // import * as express from 'express';
 var express = require('express')
-import { createServer } from 'http';
 import { ApolloServer } from 'apollo-server-express';
+import { createServer } from 'http';
+import  UserApi  from './datasource';
 
 class Server {
-    constructor(configuration) {
-        this.configuration = configuration;
+    constructor(config) {
+        this.config = config;
         this.app = express();
     }
 
@@ -30,8 +30,9 @@ class Server {
             ...schema,
             dataSources: () => {
                 const userApi = new UserApi();
-                return { userApi };
-              },
+                return { userApi }; 
+            },
+           // introspection: true,
             onHealhCheck: () => new Promise((resolve) => {
                 resolve('Route is running');
             }),
@@ -46,9 +47,9 @@ class Server {
     }
 
     run() {
-        const { app, configuration: { port } } = this;
+        const { app, config: { port } } = this;
        // console.log(port)
-       this.httpServer.listen(port, (err) => {
+        this.httpServer.listen(port, (err) => {
             if(err) {
                 console.log(err);
             }
