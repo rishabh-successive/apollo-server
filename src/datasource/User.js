@@ -1,5 +1,5 @@
-const { RESTDataSource } = require('apollo-datasource-rest');
-import  config  from '../config';
+import { RESTDataSource } from 'apollo-datasource-rest';
+import  config  from '../config/configurations';
 
 export class UserApi extends RESTDataSource {
 

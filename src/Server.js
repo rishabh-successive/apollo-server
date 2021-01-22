@@ -1,13 +1,13 @@
 // import * as express from 'express';
-var express = require('express')
+import Express from 'express';
 import { ApolloServer } from 'apollo-server-express';
 import { createServer } from 'http';
-import  UserApi  from './datasource';
+import  { UserApi }  from './datasource/User';
 
 class Server {
     constructor(config) {
         this.config = config;
-        this.app = express();
+        this.app = Express();
     }
 
     bootstrap() {

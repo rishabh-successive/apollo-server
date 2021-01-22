@@ -1,4 +1,4 @@
-import Server  from './Server.js';
+import Server  from './Server';
 import config from './config/configurations';
 import schema from './modules';
 

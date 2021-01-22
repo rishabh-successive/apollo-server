@@ -3,6 +3,7 @@ export default {
       const { payload: { email, password } } = args;
       const { dataSources: { userApi } } = context;
       const response  = await userApi.loginUser({ email, password });
-      return response.Data;
+             // console.log(response);
+             return response.data;
   }
 }
